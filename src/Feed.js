@@ -7,8 +7,15 @@ import SubscriptionIcon from "@material-ui/icons/Subscriptions";
 import EventNoteIcon from "@material-ui/icons/EventNote";
 import CalendarViewDayIcon from "@material-ui/icons/CalendarViewDay";
 import Post from "./Post";
+import { useState } from "react";
 
 const Feed = () => {
+  const [posts, setPosts] = useState([]);
+
+  const sendPost = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div className="feed">
       {/* FEED SESSION */}
@@ -17,7 +24,9 @@ const Feed = () => {
           <CreateIcon />
           <form action="submit">
             <input type="text"></input>
-            <button action="submit">Send</button>
+            <button action="submit" onClick={sendPost}>
+              Send
+            </button>
           </form>
         </div>
 
@@ -34,6 +43,9 @@ const Feed = () => {
       </div>
 
       {/* POST SESSION */}
+      {posts.map((posts) => (
+        <Post />
+      ))}
       <Post
         name="SANUSI OLATORERA"
         description="This a linkedin clone"
