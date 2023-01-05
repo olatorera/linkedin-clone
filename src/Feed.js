@@ -43,7 +43,7 @@ const Feed = () => {
       </div>
 
       {/* POST SESSION */}
-      {posts.map((posts) => (
+      {posts.map((post) => (
         <Post />
       ))}
       <Post
