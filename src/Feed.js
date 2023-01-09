@@ -38,6 +38,7 @@ const Feed = () => {
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
     });
 
+    console.log(sendPost, "me");
     setInput("");
   };
 
@@ -50,7 +51,7 @@ const Feed = () => {
           <form action="submit">
             <input
               value={input}
-              onChange={(e) => setInput(e.target)}
+              onChange={(e) => setInput(e.target.value)}
               type="text"
             ></input>
             <button action="submit" onClick={sendPost}>
