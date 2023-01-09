@@ -82,11 +82,11 @@ const Feed = () => {
           photoUrl={photoUrl}
         />
       ))}
-      <Post
+      {/* <Post
         name="SANUSI OLATORERA"
         description="This a linkedin clone"
         message="I am proud of you"
-      />
+      /> */}
     </div>
   );
 };
