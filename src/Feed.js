@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Feed.css";
 import FeedOptions from "./resources/FeedOptions";
 import CreateIcon from "@material-ui/icons/Create";
@@ -8,12 +8,33 @@ import EventNoteIcon from "@material-ui/icons/EventNote";
 import CalendarViewDayIcon from "@material-ui/icons/CalendarViewDay";
 import Post from "./Post";
 import { useState } from "react";
+import { db } from "./firebase";
+import firebase from "firebase/compat/app";
 
 const Feed = () => {
+  const [input, setInput] = useState("");
   const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    db.collection("posts").onSnapshot((snapshot) => {
+      setPosts(
+        snapshot.docs.map((doc) => ({
+          id: doc.id,
+          data: doc.data(),
+        }))
+      );
+    });
+  }, []);
 
   const sendPost = (e) => {
     e.preventDefault();
+    db.collection("posts").add({
+      name: " Sanusi Anuoluwapo",
+      description: "find me",
+      message: input,
+      photoUrl: "",
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+    });
   };
 
   return (
@@ -23,7 +44,11 @@ const Feed = () => {
         <div className="feed-input">
           <CreateIcon />
           <form action="submit">
-            <input type="text"></input>
+            <input
+              value={input}
+              onChange={(e) => setInput(e.target)}
+              type="text"
+            ></input>
             <button action="submit" onClick={sendPost}>
               Send
             </button>
@@ -43,8 +68,14 @@ const Feed = () => {
       </div>
 
       {/* POST SESSION */}
-      {posts.map((post) => (
-        <Post />
+      {posts.map(({ id, data: { name, description, message, photoUrl } }) => (
+        <Post
+          key={id}
+          name={name}
+          description={description}
+          message={message}
+          photoUrl={photoUrl}
+        />
       ))}
       <Post
         name="SANUSI OLATORERA"
