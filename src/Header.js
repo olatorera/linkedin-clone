@@ -8,20 +8,27 @@ import SupervisorAccountIcon from "@material-ui/icons/SupervisorAccount";
 import BusinessCenterIcon from "@material-ui/icons/BusinessCenter";
 import ChatIcon from "@material-ui/icons/Chat";
 import NotificationsIcon from "@material-ui/icons/Notifications";
-import linkedinImage from "../src/images/linkedin.png";
+import linkedinimagnew from "../src/images/linkedinimagnew.jpeg";
 import myImage from "../src/images/torera.jpeg";
 
 const Header = () => {
   return (
     <div className="header">
       <div className="header-left">
-        <img src={linkedinImage} className="img" alt="" />
+        <img src={linkedinimagnew} className="img" alt="" />
+
         {/*question how to target a particular image in a div using the > */}
 
         <div className="header-search">
           {/* material ui searcIcon */}
           <SearchIcon />
-          <input type="text" name="" id="" className="header-input" />
+          <input
+            placeholder="search"
+            type="text"
+            name=""
+            id=""
+            className="header-input"
+          />
         </div>
       </div>
 

@@ -13,9 +13,9 @@ function App() {
       <div className="App-header">
         {/* Header */}
         <Header />
-        <Login />
+        {/* <Login /> */}
 
-        {user ? (
+        {!user ? (
           <Login />
         ) : (
           <div className="app__body">
