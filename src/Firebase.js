@@ -1,8 +1,11 @@
-import firebase from "firebase";
+import firebase from "firebase/compat/app";
+// v9 compat packages are API compatible with v8 code
+import "firebase/compat/auth";
+import "firebase/compat/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCHTPSgdvRF-Gj9bQEM0KyjBezmYO4YuEg",
-  authDomain: "linkedin-9671d.firebaseapp.com",
+  authDomain: "linkedin-9671d.firebaseaspp.com",
   projectId: "linkedin-9671d",
   storageBucket: "linkedin-9671d.appspot.com",
   messagingSenderId: "410562361035",
@@ -11,6 +14,6 @@ const firebaseConfig = {
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();
-const auth = firebaseApp.firestore.auth();
+const auth = firebaseApp.auth();
 
 export { db, auth };

@@ -13,19 +13,19 @@ function App() {
       <div className="App-header">
         {/* Header */}
         <Header />
-        {/* <Login /> */}
 
+        {/* 
         {!user ? (
           <Login />
-        ) : (
-          <div className="app__body">
-            {/* App Body*/}
+        ) : ( */}
+        <div className="app__body">
+          {/* App Body*/}
 
-            <Sidebar />
-            <Feed />
-            {/* Widgets */}
-          </div>
-        )}
+          <Sidebar />
+          <Feed />
+          {/* Widgets */}
+        </div>
+        {/* )} */}
       </div>
     </div>
   );
