@@ -32,19 +32,21 @@ const Feed = () => {
 
     db.collection("posts").add({
       name: "Anu Sanusi",
-      description: "it worked",
+      description: "My test file",
       message: input,
       pictureUrl: "",
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
     });
+
+    setInput("");
   };
-  console.log(input, "me");
+
   return (
     <div className="feed">
       {/* FEED SESSION */}
       <div className="feed-inputMain">
         <div className="feed-input">
-          <CreateIcon />
+          <CreateIcon className="input-icon" />
           <form action="submit">
             <input
               type="text"
