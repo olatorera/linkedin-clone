@@ -17,21 +17,23 @@ const Feed = () => {
   const [input, setInput] = useState(" ");
 
   useEffect(() => {
-    db.collection("posts").onSnapshot((snapshot) =>
-      setPosts(
-        snapshot.docs.map((doc) => ({
-          id: doc.id,
-          data: doc.data(),
-        }))
-      )
-    );
+    db.collection("posts")
+      .orderBy("timestamp", "desc")
+      .onSnapshot((snapshot) =>
+        setPosts(
+          snapshot.docs.map((doc) => ({
+            id: doc.id,
+            data: doc.data(),
+          }))
+        )
+      );
   }, []);
 
   const sendPost = (e) => {
     e.preventDefault();
 
     db.collection("posts").add({
-      name: "Anu Sanusi",
+      name: "SANUSI OLATORERA",
       description: "My test file",
       message: input,
       pictureUrl: "",
