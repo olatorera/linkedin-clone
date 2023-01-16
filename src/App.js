@@ -14,18 +14,17 @@ function App() {
         {/* Header */}
         <Header />
 
-        {/* 
         {!user ? (
           <Login />
-        ) : ( */}
-        <div className="app__body">
-          {/* App Body*/}
+        ) : (
+          <div className="app__body">
+            {/* App Body*/}
 
-          <Sidebar />
-          <Feed />
-          {/* Widgets */}
-        </div>
-        {/* )} */}
+            <Sidebar />
+            <Feed />
+            {/* Widgets */}
+          </div>
+        )}
       </div>
     </div>
   );
