@@ -1,7 +1,6 @@
 import React from "react";
 import "./Login.css";
 import { auth } from "./Firebase";
-// import linkedinlogo from "../src/images/linkedinlogo.png";
 import linkedinblob from "../src/images/linkedinblob.jpeg";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
@@ -43,7 +42,6 @@ function Login() {
   return (
     <div className="login ">
       <img src={linkedinblob} className="login-img" alt="" />
-      {/* <img src={linkedinlogo} className="login-img" alt="" /> */}
 
       <form action="">
         <input
