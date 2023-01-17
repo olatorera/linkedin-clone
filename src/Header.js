@@ -10,8 +10,18 @@ import ChatIcon from "@material-ui/icons/Chat";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import linkedinimagnew from "../src/images/linkedinimagnew.jpeg";
 import myImage from "../src/images/torera.jpeg";
+import { useDispatch } from "react-redux";
+import { logout } from "./features/userSlice";
+import { auth } from "./Firebase";
 
 const Header = () => {
+  const dispatch = useDispatch();
+
+  const logoutOfApp = () => {
+    dispatch(logout());
+    auth.signOut();
+  };
+
   return (
     <div className="header">
       <div className="header-left">
@@ -38,7 +48,7 @@ const Header = () => {
         <HeaderOption Icon={BusinessCenterIcon} title="Jobs" />
         <HeaderOption Icon={ChatIcon} title="Messaging" />
         <HeaderOption Icon={NotificationsIcon} title="Notifications" />
-        <HeaderOption avatar={myImage} title="me" />
+        <HeaderOption avatar={myImage} title="me" onClick={logoutOfApp} />
       </div>
     </div>
   );

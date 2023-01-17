@@ -4,6 +4,7 @@ import { auth } from "./Firebase";
 import linkedinlogo from "../src/images/linkedinlogo.png";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { userLogin } from "./features/userSlice";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -12,7 +13,7 @@ function Login() {
   const [picture, setPicture] = useState("");
   const dispatch = useDispatch();
 
-  const loginToken = (e) => {
+  const loginToApp = (e) => {
     e.preventDefault();
   };
 
@@ -23,21 +24,25 @@ function Login() {
     auth
       .createUserWithEmailAndPassword(email, password)
       .then((userAuth) => {
-        userAuth.user
-          .updateProfile({
+        console.log(userAuth.user, "1");
+        const userDetails = userAuth.user.multiFactor.user;
+        console.log(userDetails, "new");
+        dispatch(
+          userLogin({
+            email: userDetails.email,
+            uid: userDetails.uid,
             displayName: name,
             photoURL: picture,
           })
-          .then(() => {
-            dispatch(
-              Login({
-                email: userAuth.user.email,
-                uid: userAuth.user.uid,
-                displayName: name,
-                photoURL: picture,
-              })
-            );
-          });
+        );
+        //   userAuth.user
+        //     .updateProfile({
+        //       displayName: name,
+        //       photoURL: picture,
+        //     })
+        //     .then(() => {
+
+        //     });
       })
       .catch((error) => alert(error));
   };
@@ -49,7 +54,7 @@ function Login() {
       <form action="">
         <input
           type="text"
-          placeholder="Fullname required if registered"
+          placeholder="Full name (required if registered)"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
@@ -72,7 +77,7 @@ function Login() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit" onClick={loginToken}>
+        <button type="submit" onClick={loginToApp}>
           Sign In
         </button>
       </form>
