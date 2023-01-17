@@ -35,14 +35,6 @@ function Login() {
             photoURL: picture,
           })
         );
-        //   userAuth.user
-        //     .updateProfile({
-        //       displayName: name,
-        //       photoURL: picture,
-        //     })
-        //     .then(() => {
-
-        //     });
       })
       .catch((error) => alert(error));
   };
