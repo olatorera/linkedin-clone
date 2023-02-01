@@ -3,6 +3,7 @@ import Login from "./Login";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import Feed from "./Feed";
+import Leftbar from "./Leftbar";
 import { useDispatch, useSelector } from "react-redux";
 import { logout, selectUser, userLogin } from "./features/userSlice";
 import { useEffect } from "react";
@@ -47,6 +48,7 @@ function App() {
 
             <Sidebar />
             <Feed />
+            <Leftbar />
             {/* Widgets */}
           </div>
         )}
