@@ -4,9 +4,9 @@ import { Avatar } from "@material-ui/core";
 
 // once you see ({}) know that the component was destructured, you can
 // destructure the props component by passing in the title and icon
-function HeaderOption({ avatar, Icon, title }) {
+function HeaderOption({ avatar, Icon, title, onClick }) {
   return (
-    <div className="headerOption">
+    <div onClick={onClick} className="headerOption">
       {/* to render an icon if it is passed */}
       {Icon && <Icon className="headerOption__icon" />}
       {/* to render an avatar if it is passed */}

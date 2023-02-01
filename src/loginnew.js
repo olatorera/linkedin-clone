@@ -1,7 +1,7 @@
 import React from "react";
 import "./Login.css";
 import { auth } from "./Firebase";
-import linkedinblob from "../src/images/linkedinblob.jpeg";
+import linkedinlogo from "../src/images/linkedinlogo.png";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { userLogin } from "./features/userSlice";
@@ -35,13 +35,21 @@ function Login() {
             photoURL: picture,
           })
         );
+        //   userAuth.user
+        //     .updateProfile({
+        //       displayName: name,
+        //       photoURL: picture,
+        //     })
+        //     .then(() => {
+
+        //     });
       })
       .catch((error) => alert(error));
   };
 
   return (
     <div className="login ">
-      <img src={linkedinblob} className="login-img" alt="" />
+      <img src={linkedinlogo} className="login-img" alt="" />
 
       <form action="">
         <input

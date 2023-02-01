@@ -22,6 +22,7 @@
   object-fit: contain;
   height: 40px;
   margin-right: 10px;
+  background-color: #0d74b1;
 }
 
 .header-search {
