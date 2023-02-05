@@ -12,6 +12,7 @@ const Sidebar = () => {
           <Avatar className="sidebar-avatar avatar1" />
           <div className="text-btn">
             <p> Job Vacancies in Nigeria</p>
+            <h6> Company . Staffing and Recruiting </h6>
             <Button variant="outlined">Follow</Button>
           </div>
         </div>
@@ -19,7 +20,13 @@ const Sidebar = () => {
         <div className="avatar-text">
           <Avatar className="sidebar-avatar avatar1" />
           <div className="text-btn">
-            <p> Job Vacancies in Nigeria</p>
+            <p> Anthony Ajulo</p>
+            <h6>
+              {" "}
+              Managing Partner |Co-founder
+              <br />
+              |Entrepreur |Investor |
+            </h6>
             <Button variant="outlined">Follow</Button>
           </div>
         </div>
@@ -27,7 +34,8 @@ const Sidebar = () => {
         <div className="avatar-text">
           <Avatar className="sidebar-avatar avatar1" />
           <div className="text-btn">
-            <p> Job Vacancies in Nigeria</p>
+            <p> MyJobMag Nigeria</p>
+            <h6>Company . Human Resources</h6>
             <Button variant="outlined">Follow</Button>
           </div>
         </div>
