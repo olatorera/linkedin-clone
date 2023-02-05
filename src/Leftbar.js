@@ -6,7 +6,7 @@ import linkedinblob from "../src/images/linkedinblob.jpeg";
 
 const Sidebar = () => {
   return (
-    <div className="sidebar__body">
+    <div className="sidebar__body body">
       <div className="sidebar-top">
         <h3>Add to your feed</h3>
         <div className="avatar-text">

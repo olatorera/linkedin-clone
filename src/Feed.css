@@ -46,3 +46,15 @@
   display: flex;
   justify-content: space-evenly;
 }
+
+@media screen and (max-width: 950px) {
+  .feed {
+    flex: 0.7;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .feed {
+    flex: 1;
+  }
+}

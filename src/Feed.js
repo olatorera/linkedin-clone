@@ -44,7 +44,7 @@ const Feed = () => {
   };
 
   return (
-    <div className="feed">
+    <div className="feed feed1">
       {/* FEED SESSION */}
       <div className="feed-inputMain">
         <div className="feed-input">

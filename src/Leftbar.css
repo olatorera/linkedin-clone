@@ -85,8 +85,8 @@ h5 {
   padding: 5px;
 }
 
-@media screen and (max-width: 750px) {
-  .sidebar__body {
+@media screen and (max-width: 950px) {
+  .body {
     display: none;
   }
 }

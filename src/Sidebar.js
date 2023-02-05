@@ -5,7 +5,7 @@ import "./Sidebar.css";
 
 const Sidebar = () => {
   return (
-    <div className="sidebar__body">
+    <div className="sidebar__body body1">
       <div className="sidebar-top">
         {/*Get images from unsplash  */}
         <img
