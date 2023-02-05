@@ -8,6 +8,7 @@ const Sidebar = () => {
   return (
     <div className="sidebar__body">
       <div className="sidebar-top">
+        <h3>Add to your feed</h3>
         <div className="avatar-text">
           <Avatar className="sidebar-avatar avatar1" />
           <div className="text-btn">
@@ -39,6 +40,7 @@ const Sidebar = () => {
             <Button variant="outlined">Follow</Button>
           </div>
         </div>
+        <h5>View all recommendations </h5>
       </div>
 
       <div className="sidebar-bottom">
