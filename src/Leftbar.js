@@ -8,21 +8,28 @@ const Sidebar = () => {
   return (
     <div className="sidebar__body">
       <div className="sidebar-top">
-        <div className="sidebar-stats"></div>
-        <div>
-          <Avatar className="sidebar-avatar" />
-          <p> Job Vacancies in Nigeria</p>
-          <Button variant="outlined">Follow</Button>
+        <div className="avatar-text">
+          <Avatar className="sidebar-avatar avatar1" />
+          <div className="text-btn">
+            <p> Job Vacancies in Nigeria</p>
+            <Button variant="outlined">Follow</Button>
+          </div>
         </div>
-        <div>
-          <Avatar className="sidebar-avatar" />
-          <p> Job Vacancies in Nigeria</p>
-          <Button variant="outlined">Follow</Button>
+
+        <div className="avatar-text">
+          <Avatar className="sidebar-avatar avatar1" />
+          <div className="text-btn">
+            <p> Job Vacancies in Nigeria</p>
+            <Button variant="outlined">Follow</Button>
+          </div>
         </div>
-        <div>
-          <Avatar className="sidebar-avatar" />
-          <p> Job Vacancies in Nigeria</p>
-          <Button variant="outlined">Follow</Button>
+
+        <div className="avatar-text">
+          <Avatar className="sidebar-avatar avatar1" />
+          <div className="text-btn">
+            <p> Job Vacancies in Nigeria</p>
+            <Button variant="outlined">Follow</Button>
+          </div>
         </div>
       </div>
 
