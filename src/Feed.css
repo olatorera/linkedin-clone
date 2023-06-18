@@ -51,10 +51,39 @@
   .feed {
     flex: 0.7;
   }
+  .feed-inputMain {
+    background-color: white;
+    padding: 10px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    margin: 25px 0;
+  }
 }
 
 @media screen and (max-width: 750px) {
   .feed {
     flex: 1;
+  }
+
+  .feed-inputMain {
+    background-color: white;
+    padding: 10px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    margin: 25px 0;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .feed {
+    flex: 1;
+  }
+
+  .feed-inputMain {
+    background-color: white;
+    padding: 10px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    margin: 25px 0;
   }
 }
