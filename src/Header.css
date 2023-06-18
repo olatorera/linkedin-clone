@@ -40,3 +40,15 @@
   border: none;
   background: none;
 }
+
+@media screen and (max-width: 950px) {
+}
+
+@media screen and (max-width: 750px) {
+}
+
+@media screen and (max-width: 540px) {
+}
+
+@media screen and (max-width: 360px) {
+}
