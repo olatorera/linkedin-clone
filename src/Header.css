@@ -42,13 +42,57 @@
 }
 
 @media screen and (max-width: 950px) {
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    background-color: white;
+    justify-content: space-evenly;
+    border-bottom: 1px solid lightgrey;
+    padding: 10px 0 10px 0;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 750px) {
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    background-color: white;
+    justify-content: space-evenly;
+    border-bottom: 1px solid lightgrey;
+    padding: 10px 0 10px 0;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 540px) {
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    background-color: white;
+    justify-content: space-evenly;
+    border-bottom: 1px solid lightgrey;
+    padding: 10px 0 10px 0;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 360px) {
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    background-color: white;
+    justify-content: space-evenly;
+    border-bottom: 1px solid lightgrey;
+    padding: 10px 0 10px 0;
+    width: 100%;
+  }
 }
